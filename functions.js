@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         src = '../logo-wide.svg'
     }
+    console.log(src);
     
     fetch(src)
         .then(response => response.text())
