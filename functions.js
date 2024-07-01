@@ -29,10 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementsByClassName("active")[0].style.backgroundColor=mycolor;
 
     var src;
-    console.log(window.location.pathname);
     if (window.location.pathname == "/index.html" ){
         src = '/logo-wide.svg'
-    } elif (window.location.pathname == "/woow/index.html") {
+    } else if (window.location.pathname == "/woow/index.html") {
         src = '/woow/logo-wide.svg'
     } else {
         src = '../logo-wide.svg'
