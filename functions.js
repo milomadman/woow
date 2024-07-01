@@ -30,8 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var src;
     console.log(window.location.pathname);
-    if (window.location.pathname == "/index.html" || window.location.pathname == "/woow/index.html"){
+    if (window.location.pathname == "/index.html" ){
         src = '/logo-wide.svg'
+    } elif (window.location.pathname == "/woow/index.html") {
+        src = '/woow/logo-wide.svg'
     } else {
         src = '../logo-wide.svg'
     }
