@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var src;
     if (window.location.pathname == "/index.html"){
-        src = 'logo-wide.svg'
+        src = '/logo-wide.svg'
     } else {
         src = '../logo-wide.svg'
     }
