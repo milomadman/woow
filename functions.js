@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementsByClassName("active")[0].style.backgroundColor=mycolor;
 
     var src;
+    console.log(window.location.pathname);
     if (window.location.pathname == "/index.html"){
-        src = 'woow/logo-wide.svg'
+        src = '/logo-wide.svg'
     } else {
         src = '../logo-wide.svg'
     }
-    console.log(src);
     
     fetch(src)
         .then(response => response.text())
