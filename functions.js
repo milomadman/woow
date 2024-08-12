@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (window.location.pathname == "/html/Kontakt.html"){
         document.getElementById("arrowpath").style.fill = mycolor;
+        console.log("hello");
     }
+    console.log(Window.location.pathname);
 
     var src;
     if (window.location.pathname == "/index.html" ){
