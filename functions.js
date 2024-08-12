@@ -4,39 +4,38 @@ function getSVGString(img) {
     return svgString;
 }
 
-/*addEventListener("load", () => {
-    colors = ["#ff0000","#1eafc7","#ffa500","#008000","#ff00c5","#ab6cf2"];
+var mycolor;
 
-    x = Math.floor(Math.random()*colors.length);
-    mycolor = colors[x]
-
-    document.getElementsByClassName("active")[0].style.backgroundColor=mycolor;
-
-    const paths = document.querySelectorAll('#logo-svg path');
-    paths.forEach(path => {
-        path.setAttribute('fill', mycolor); // Change to your desired color
-    });
-
-});*/
+window.addEventListener('beforeunload', function() {
+    // Store current color
+    localStorage.setItem('elementColor', mycolor);
+});
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    colors = ["#ff0000","#1eafc7","#ffa500","#008000","#ff00c5","#ab6cf2"];
+    const previousColor = localStorage.getItem('elementColor');
+    colors = ["#ff0000","#1eafc7","#ffa500","#008000","#ff00c5","#ab6cf2","#003EFF"];
+    colors = colors.filter(item => item !== previousColor);
 
     x = Math.floor(Math.random()*colors.length);
     mycolor = colors[x]
 
+
     document.getElementsByClassName("active")[0].style.backgroundColor=mycolor;
+
+    if (window.location.pathname == "/html/Kontakt.html"){
+        document.getElementById("arrowpath").style.fill = mycolor;
+    }
 
     var src;
     if (window.location.pathname == "/index.html" ){
-        src = '/logo-wide.svg'
+        src = 'Logos/logo-wide.svg'
     } else if (window.location.pathname == "/woow/index.html") {
-        src = '/woow/logo-wide.svg'
+        src = '/woow/Logos/logo-wide.svg'
     } else {
-        src = '../logo-wide.svg'
+        src = '../Logos/logo-wide.svg'
     }
-    
+
     fetch(src)
         .then(response => response.text())
         .then(svg => {
@@ -53,3 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error loading SVG:', error));
 });
+
+
+
+
+
+

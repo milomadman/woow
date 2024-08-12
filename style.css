@@ -63,7 +63,7 @@ p {
   text-align: center;
   padding: 1.5% 26px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .topnav a:hover {
@@ -79,13 +79,16 @@ p {
   text-justify: inter-word;
 }
 
+#Kontakt {
+  margin-top: 1%;
+}
+
 #aboutus {
   margin-left:0;
   width: 100%;
 }
 
 .logo {
-  margin-right: auto;
   width: 16%;
 } 
 
@@ -96,6 +99,7 @@ p {
 #logo-container {
   height:100%;
   max-height: 100%;
+  width: auto;
 }
 
 
@@ -106,6 +110,107 @@ p {
 
 .oneofus {
   padding-bottom: 20px;
+}
+
+#Fragen {
+  padding-left: 5%;
+}
+
+ul.uni-bullet {
+  list-style-image: url('./Logos/mini-uni.svg');
+  overflow: visible;
+}
+
+.questions li {
+  font-size: 20px;
+}
+
+#do-it{
+  margin-top: 2em;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+#arrow {
+  position: relative;
+  overflow: visible;
+  height:"700";
+  width:"750";
+}
+
+label {
+  font-size: 20px;
+  display: block;
+  text-align: left;
+  min-width: 120px;
+}
+
+.LabelAndInput {
+  display: flex;
+  align-items: flex-start;    
+  margin-bottom: 3%;
+  flex-direction: row;
+}
+
+input, textarea {
+  height: 2.2vw;
+  width: 70%;
+  background-color: rgb(199, 199, 199);
+  resize: none;
+}
+
+input, textarea {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5vw;
+  text-align: left;
+  margin-top: 0.5vw;
+  padding-left: 0.5vw;
+}
+
+#Mitteilung {
+  height: 20vw;
+}
+
+#Kontaktformular {
+  margin-top: 1.8em;
+}
+
+#AbschickKnopf {
+  text-align: right;
+  margin-right: calc(30% - 120px);
+}
+
+#abschicken {
+  font-size: 20px;
+  background-color: rgb(199, 199, 199);
+}
+
+#Inhaltsverzeichnis {
+  margin-bottom: 0;
+}
+
+.Einräder {
+  margin-top: 0;
+}
+
+.unipics {
+  width: 100%;
+  margin-bottom: 8%;
+}
+
+.univideo {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+#Weiteres {
+  margin-bottom: 10%;
+}
+
+.Inhalt a {
+  background-color: red;
 }
 
 /*  
@@ -133,7 +238,16 @@ td,th {
   padding-left:7%;
 }*/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 800px) {
+  .logo {
+    margin-right: auto;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
@@ -159,9 +273,22 @@ td,th {
   }
 
   .topnav .logo {
-    width: auto; /* Let the logo size adjust automatically */
+    width: 100%; /* Let the logo size adjust automatically */
+    margin-left: 33%;
     margin-bottom: 10px; /* Add spacing below the logo */
   }
+
+  #arrow {
+    display: none;
+  }
+
+  .unipics {
+    margin-bottom: 0;
+  }
+
+  .univideo {
+    margin-left: 0;
+    margin-bottom: 15%;
+    width: 70%;
+  }
 }
-
-
