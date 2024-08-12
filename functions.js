@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("arrowpath").style.fill = mycolor;
         console.log("hello");
     }
-    console.log(Window.location.pathname);
+    console.log(window.location);
 
     var src;
     if (window.location.pathname == "/index.html" ){
