@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style.css" type="text/css" />
     <script src="../functions.js"></script>
-    <link rel="icon" href="/Uni.svg">
+    <link rel="icon" href="../Logos/Uni.svg">
 </head>
 
 <body>
@@ -15,103 +15,257 @@
         <a href="Verein.html">Verein</a>
         <a class="active" href="Einrad.html">Einrad</a>
         <a href="Wir.html">Über uns</a>
-        <a href="Gallerie.html">Gallerie</a>
+        <a href="Kontakt.html">Kontakt</a>
     </div>
 
     <div style="padding-left:16px">
-        <div class="Text" id="Einradsport">
-            <h1>Der Einradsport</h1>
-            <p>
-                Der Einradsport ist so vielfältig, wie er auch verborgen ist. Die wenigsten Leute können sich unter dem Einradfahren 
-                mehr vorstellen als Zirkus und Balance-Spielzeug. Der Einradsport umfasst hingegen über 30 verschiedene Disziplinen, 
-                die in fünf Untergruppen unterteilt sind.
-            </p>
-
-            <h2>Einradfahren lernen</h2>
-            <p>
-                Einradfahren zu lernen erfordert viel Übung und beinhaltet gewisses Suchtpotential. Am besten übt man zunächst mit 
-                Stützen auf beiden Seiten, wie Hilfspersonen, Wänden oder Geländer. Wichtig bei Hilfspersonen ist, dass sie als Stütze 
-                helfen und nicht die Person auf dem Einrad festhalten. Es kann auch eine Mülltonne, die geschoben werden kann, benützt 
-                werden. Ideal ist ein flacher Übungsort mit genügend Sturzraum. So kann ein erstes Fahrgefühl fürs Einrad erworben werden. 
-                Die Stützen können immer leichter gehalten werden und schrittweise losgelassen werden.
-            </p>
-            <h3>Der Aufstieg</h3>
-            <p>
-                Wenn erste Fahrten ohne Stützen gelingen, geht es um den Aufstieg. Suche dir dazu erstmals eine Wand oder Hilfsperson. 
-                Drehe ein Pedal zu dir, auf welches du den ersten Fuss setzt. Nimm nun den Sattel zwischen die Beine, während du auf 
-                deinem Standbein am Boden stehst. Verteile langsam und gleichmäßig dein Gewicht auf das Pedal und den Sattel, lehne dich 
-                nach vorne und bringe den zweiten Fuß auf das andere Pedal. Die Anfangspedalstellung bleibt dabei unverändert. Und schon 
-                bist du auf dem Einrad. Wenn dein Rad immer unter dir hindurchfährt, steigst du zu schnell auf oder hast zu viel Gewicht 
-                auf deinem ersten Pedal. Versuche also einen langsamen Aufstieg mit gleichviel Gewicht im Sattel wie auf dem Pedal. 
-                Nun kannst du nach und nach auf die Stützen verzichten und ohne Hilfe üben. Da der Aufstieg ohne Unterstützung relativ 
-                schwierig ist, erfordert dies weiterhin viel Übung.
-            </p>
-            <h3>Geschwindigkeit und Richtung kontrollieren</h3>
-            <p>
-                Beim langsamen Fahren sollte die Körperhaltung aufrecht sein. Beim schnellen Fahren und bei Anstiegen lehnt man sich 
-                leicht nach vorne. Zum Bremsen und beim Abfahren verlagert man das Gewicht nach hinten. Für Kurven schaut man in die 
-                neue Fahrtrichtung und kippt die Hüfte entsprechend.
-                <br>
-                Jetzt sind die Basics gelernt und wir stellen dir die verschiedenen Disziplinen vor. 
-            </p>
-
-            <h2>Muni</h2>
-            <p>
-                Muni steht sowohl für Mountain Unicycling als auch für das Mountain Unicycle. Mountain Unicycling ist die Bezeichnung 
-                der Offroad Disziplinen, Mountain Unicycles sind Einräder, die auf solche Aktivitäten spezialisiert sind. Muni kann 
-                auch als Mountain-Bike-Variante des Einrades beschrieben werden. Muni beinhaltet Downhill und Uphill (hangabwärts und 
-                -aufwärts) Strecken mit hohen Schwierigkeiten, Cross Country (Mischung von Uphill und Downhill) mit längeren Distanzen, 
-                Cyclocross mit einer Rundbahn mit künstlichen Hindernissen und Munipacking als eine Kombination von Muni und Backpacking. 
-                Der Reiz liegt für viele Muni-Fahrer*innen nicht in Wettkämpfen, sondern in Technik, Freundschaft und Natur. Das Ziel 
-                ist es, mit Freunden möglichst schwierige, lange und hohe Touren zu unternehmen und dabei viel Spass und Ausgelassenheit 
-                zu erleben.
-
-            <h2>Urbane Disziplinen</h2>
-                <h3>Trial</h3>
+        <div class="row" id="Einradsport">
+            <div class="col-8">
+                <h1>Der Einradsport</h1>
                 <p>
-                    Im Trial werden Hindernisse mit dem Einrad überwunden. Dabei wird auf und über alle möglichen Objekte (oft Paletten, 
-                    Holzbalken, Metallstangen, Traktorreifen und Autos) gefahren und gesprungen. Ziel ist es, eine festgelegte Route 
-                    über die Hindernisse (eine sogenannte Line) zu schaffen.
+                    Der Einradsport ist so vielfältig, wie die Menschen die ihn lieben. Die Spannbreite von Disziplinen ist riesig und umfasst 
+                    so viel mehr als nur Zirkus und Balance-Spielzeug. Von Einradhockey, zu Hochsprung, zu Downhill, zu Langsamfahren, zu krassen
+                    Tricks und 100km Rennen gibt es kaum etwas was es nicht gibt.
                 </p>
 
-                <h3>Flatland</h3>
-                <p>
-                    Im Flatland werden beeindruckende und schwierige Tricks geübt und zu Kombinationen zusammengefügt. Die Tricks sollen 
-                    möglichst krass und cool aussehen. 
+                <p id="Inhaltsverzeichnis">
+                    Auf dieser Seite geben wir dir einen kleinen Überblick über die grosse Welt auf einem Rad (World on One Wheel)
+                    <ul class="uni-bullet Inhalt"> 
+                        <li><a href="#Einradlernen">Einradfahren lernen</a></li>
+                        <li><a href="#Muni">Die verschiedenen Disziplinen</a></li>
+                        <li><a href="#Einräder">Die verschiedenen Einräder</a></li>
+                    </ul>
                 </p>
+   
+            </div>
+                   
+            <div class="col-4"> </div>
+        </div>
 
-                <h3>Street</h3>
+        <div class="row" id="EinradLernen">
+            <div class="col-8">
+                <h2>Einradfahren lernen</h2>
                 <p>
-                    Street kombiniert Trial und Flatland. Hierbei werden Tricks kreativ mit urbanen Hindernissen (Treppen, Rails, Bänke, 
-                    ect.) kombiniert. Oft wird Street auch in Skateparks geübt.
+                    Einradfahren sieht erst einmal beeindruckend aus, mit ein bisschen Hingabe können das jedoch alle lernen. Wichtig zu beachten
+                    ist allerdings das hohe Suchtpotential. <br>
+                    Zum Üben sucht man sich eine Stütze, am besten ein Mensch. Ein Geländer oder eine Mauer tuts aber auch. Noch besser sind
+                    zwei auf beiden Seiten. Zu Beginn braucht es sehr viel Hilfe um überhaupt erst aufs Einrad zu kommen und oben zu bleiben. 
+                    Mit der Zeit wirst du merken, dass du die Stütze immer weniger brauchst und schon bald loslassen kannst!
                 </p>
+                    <h3>Der Aufstieg</h3>
+                    <p>
+                        Die erste grosse Hürde ist der Aufstieg. Dabei ist wichtig, dass du den ersten Fuss auf das Pedal setzt, welches näher bei 
+                        dir ist. Mit dem Sattel zwischen den Beinen und der Hilfe einer Stütze, verteilst du nun langsam dein Gewicht auf das Pedal 
+                        und den Sattel und setzt den zweiten Fuss auf das zweite Pedal. Wenn du bereits frei fährst, kannst du dich an den freien 
+                        Aufstieg wagen. Diesen übst du am besten in leicht fallendem Gelände.
+                    </p>
+                    <h3>Wie gehts weiter?</h3>
+                    <p>
+                        Einradfahren gelernt und aufsteigen klappt auch? Die Welt des Einradfahren steht dir offen! Vielleicht fangst du mit ein paar 
+                        Kurven an. Oder du lernst zu springen. Oder Stufen runterzufahren. Oder rückwärtsfahren. Oder oder oder... Es gibt keinen Lehrplan, 
+                        mach das worauf du Lust hast. Vielleicht findest du unter den vielen Disziplinen des Einradsports Inspiration.
+                    </p>
 
-                <h3>Sprünge</h3>
-                <p>
-                    Beim Hochsprung wird über eine möglichst hohe Stange oder auf gestapelte Paletten gesprungen. Der Weitsprung ist 
-                    entweder mit Anlauf auf einer Bahn oder aus dem Stand von Palette zu Palette.
-                </p>
+                <img src="../Einrad-Fotos/EinradLernen.JPG" class="unipics">
+            </div>
+            <div class="col-4">
+                <iframe class="univideo"  width="700" height="315" src="https://www.youtube.com/embed/BHbJOXAajwY" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
 
-            <h2>Bahn- und Strassenrennen</h2>
-            <p>
-                Bahnrennen finden auf der Tartanbahn, Strassenrennen auf normalen Strassen statt. Strassenrennen gehen von 10km Rennen 
-                über den Marathon bis vereinzelt 100km Rennen. Bahnrennen umfassen Kurzdistanzen (100m, 400m, 800m) sowie speziellere 
-                Disziplinen wie Slalom, Einbeinfahren, Langsamfahren und Stillstand.
-            </p>
+        <div class="row" id="Muni">
+            <div class="col-8">
+                <h2>Disziplinen</h2>
+                
+                    <h3>Muni: Mountain Unicycling</h3>
+                    <p>
+                        Muni steht für Mountain Unicycling auf Deutsch Bergeinradfahren, vergleichbar mit dem Mountainbike. Muni umfasst jegliches 
+                        Einradfahren abseits der Strassen, ob hoch (Uphill) oder runter (Downhill), beides (Cross Country), mit künstlichen 
+                        Hindernissen (Cyclocross) oder lange Touren (Munipacking). Der Reiz des Muni-fahren ist das Abenteuer, die Freundschaften
+                        und die Natur. Das Ziel ist es, mit Freunden möglichst schwierige, lange und hohe Touren zu unternehmen und dabei viel Spass 
+                        und Ausgelassenheit zu erleben, da sind Wettkämpfe völlig zweitrangig.
+                    </p>
+
+                <img src="../Einrad-Fotos/Muni.jpg" class="unipics">
+            </div>
+            <div class="col-4">
+                <iframe class="univideo"  width="700" height="315" src="https://www.youtube.com/embed/rlYYVy83EHE" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="Trial">
+            <div class="col-8">
+                <h3>Urbane Disziplinen</h3>
+                    <h4>Trial</h4>
+                    <p>
+                        Im Trial werden Hindernisse mit dem Einrad überwunden. Dabei wird auf und über alle möglichen Objekte wie Paletten, 
+                        Balken, Stangen, Traktorreifen und Autos gefahren und gesprungen. Bei Wettkämpfen ist ein riesiger Spielplatz aus solchen 
+                        Hindernissen aufgebaut mit verschiedenen Lines für welche jeweils ein vorgegebener Pfad gegeben ist und je nach Schwierigkeit 
+                        Punkte gibt. Weltmeister und Kinder treten alle auf dem gleichen Terrain an, und haben alle 90 Minuten Zeit um so viele Lines 
+                        wie möglich zu absolvieren. Doch um Trial zu machen braucht man keinen riesigen Trial Park. Mit ein bisschen Kreativität kann
+                        jede Mauer, jede Treppe und jeder Stein zu einer Trial-Line werden.
+                    </p>
+                    
+                <img src="../Einrad-Fotos/Trial.jpg" class="unipics">
+            </div>
+            <div class="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VHQF5giATjw" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="Flatland">
+            <div class="col-8">
+                <h4>Flatland</h4>
+                    <p>
+                        Im Flatland werden beeindruckende und schwierige Tricks geübt und zu Kombinationen zusammengefügt. Die Tricks werden wie der Name 
+                        schon sagt auf flachem Grund, meist Asphalt ausgeführt. Dabei dreht man das Einrad unter sich, sich selber auf dem Einrad, über dem 
+                        Einrad, auch hier sind der Kreativität kaum Grenzen gesetzt. Im Wettkampf treten hier jeweils zwei Einradfahrer*innen gegeneinander 
+                        in einem Battle an. Die Zuschauer sitzen rundherum und feuern sie an während eine Jury entscheidet wer der beiden in die nächste Runde kommt. 
+                    </p>
+                
+                <img src="../Einrad-Fotos/Flatland.JPG" class="unipics">   
+            </div>
             
-            <h2>Teamsport</h2>
-            <p>
-                Einradhockey und Einrad-Basketball sind die Hauptdisziplinen im Teamsport. Einradhockey wird mit Unihockey-Toren, 
-                Tennisbällen und Eishockeyschlägern gespielt. Die Teams sind meist alters- und geschlechtsgemischt.
-            </p>
+            <div class="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1Ydl2xnBZf8" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
 
-            <h2>Freestyle</h2>
-            <p>
-                Freestyle ist die verbreitetste Disziplin und ist mit Eiskunstlauf vergleichbar. Verschiedene Tricks werden zu einer 
-                Kür kombiniert, die mit Musik und Kostüm in einer Halle geübt und aufgeführt wird. Wichtig sind korrekte, ästhetische 
-                Ausführungen der Tricks sowie fliessende Übergänge. Es gibt Einzel-, Paar- und Gruppen-Freestyle.
-            </p>
+        <div class="row" id="Street">
+            <div class="col-8">
+                <h4>Street</h4>
+                    <p>
+                        Street kombiniert Trial und Flatland. Hierbei werden Tricks kreativ mit urbanen (städtischen) Hindernissen wie Treppen, Rails und 
+                        Bänken, kombiniert. Oft wird Street in Skateparks geübt.
+                    </p>
 
+                
+            <img src="../Einrad-Fotos/Street.JPG" class="unipics">   
+            </div>
+            
+            <div class="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/h5qFY7Yq9Vo" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="Sprünge">
+            <div class="col-8">
+                <h4>Sprünge</h4>
+                    <p>
+                        Beim Hochsprung wird mit dem Einrad über eine Stange oder auf einen Stapel Paletten gesprungen. Durch die optionale Nutzung der 
+                        Kompression des Reifens können Höhen bis zu 140 cm erreicht werden! Beim Weitsprung gibt es die Variante auf der Bahn bei welcher man
+                        aus dem Fahren mit hoher Geschwindigkeit möglichst weit springt. Bei der Variante mit Paletten springt man mit kaum Anlauf von einer 
+                        Palette zu einer anderen.
+                    </p>
+                
+                <img src="../Einrad-Fotos/Jumps.JPG" class="unipics">   
+            </div>
+            
+            <div class="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NNjpx1nauFg" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="Rennen">
+            <div class="col-8">
+                <h3>Bahn- und Strassenrennen</h3>
+                    <p>
+                        Bahnrennen finden auf der Tartanbahn, Strassenrennen auf normalen Strassen statt. Strassenrennen reichen von 10km Rennen 
+                        über den Marathon bis vereinzelt 100km Rennen. Bahnrennen umfassen  Kurzdistanzen (100m, 400m, 800m) sowie speziellere 
+                        Disziplinen wie Slalom, Einbeinfahren, Langsamfahren und Stillstand.
+                    </p>
+
+
+                <img src="../Einrad-Fotos/Rennen.JPG" class="unipics">   
+            </div>
+            
+            <div class="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ashWSsezL28" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="Teamsport">
+            <div class="col-8">
+                <h3>Teamsport</h3>
+                    <p>
+                        Einradhockey und Einrad-Basketball sind die Hauptdisziplinen im Teamsport. Einradhockey wird in Teams von sechs mit 
+                        Unihockey-Toren, Tennisbällen und Eishockeyschlägern gespielt. Die Teams sind meist alters- und geschlechtsgemischt. 
+                        In der Schweiz gibt es einige Vereine und Teams (<strong><link href="einradhockey.ch">einradhockey.ch</strong>).
+                    </p>
+
+                <img src="../Einrad-Fotos/Hockey.JPG" class="unipics">   
+            </div>
+            
+            <div class="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/A7RtXqGISRE" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="Freestyle">
+            <div class="col-8">
+                <h3>Freestyle</h3>
+                <p>
+                    Freestyle ist die verbreitetste Disziplin und ist mit Eiskunstlauf vergleichbar. Verschiedene Tricks werden zu einer 
+                    Kür kombiniert, die mit Musik und Kostüm in einer Halle geübt und aufgeführt wird. Wichtig sind korrekte, ästhetische 
+                    Ausführungen der Tricks sowie fliessende Übergänge. Es gibt Einzel-, Paar- und Gruppen-Freestyle.
+                </p>
+
+                <img src="../Einrad-Fotos/Freestyle.JPG" class="unipics">   
+            </div>
+            
+            <div class="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FybctSiwoi8" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="Zirkus-Weiteres">
+            <div class="col-8">
+                <h3>Zirkus / Show</h3>
+                    <p>
+                        Beim Zirkus oder in Shows hat die Wirkung eine grosse Wichtigkeit, schliesslich soll das gezeigte Beeindrucken! <strong>Oft werden </strong>
+                    </p>
+
+                <img src="../Einrad-Fotos/Show.JPG" class="unipics">   
+            </div>
+            
+            <div class="col-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/w0oHaTGnnag" frameborder="0" allowfullscreen class="univideo"></iframe>
+            </div>
+        </div>
+
+        <div class="row" id="Weiteres">
+            <div class="col-8">   
+                <h3>Weiteres</h3>
+                <p>
+                    Wer noch mehr über den Einradsport lernen möchte, dem sind folgende <strong>Bücher, Websites und YouTubeChannels</strong> zu empfehlen!
+                </p>
+            </div>
+        </div>
+
+        <div class="row" id="Einräder">
+            <div class="col-8">
+                <h2>Einräder</h2>
+                <p>
+                    Es gibt unzählige verschiedene Einräder von ganz kleinen 12"-Räder zu grossen 36" Räder. Mit oder ohne Bremse, dicker oder
+                    dünner Reifen und in allen möglichen Farben.
+                </p>
+                    <h3>Anfangen</h3>
+                    <p>
+                        Zum Anfangen braucht es noch kein krasses teures Einrad. Je nach Körpergrösse ist ein Einrad zwischen 16" und 24" üblich. Eine Bremse braucht
+                        es keine, denn normale Einräder haben keinen Leerlauf.<br>
+                        Wer motiviert ist, dass Einrad vielfältiger zu nutzen, kommt schwer um ein spezifisches Einrad für die jeweilige Diszipliin herum.
+                        <ul class="uni-bullet Einräder"> 
+                            <li><strong>Muni: </strong>Munis haben grössere Räder (24"-29"), dicke Pneus, Bremsen und sind sehr stabil gebaut.</li>
+                            <li><strong>Urbane Disziplinen: </strong>Für Trial, Flatland, Street und Sprünge sind stabile kleinere Einräder (19-20") mit dicken Pneus üblich.</li>
+                            <li><strong>Strassen: </strong>Für grosse Distanzen sind grössere Räder (29-36") mit Bremsen geeignet. Bei grossen Portemonnaies liegt vielleicht sogar eine Schaltung (Schlumpfnabe) drin.</li>
+                            <li><strong>Freestyle und Teamsport: </strong>Für Teamsport und Freestyle sind wendige 20" Räder gut. Für den Gebrauch in Hallen braucht es allenfalls einen hellen Pneu.</li>
+                        </ul>
+                    </p>
+
+                <img src="../Einrad-Fotos/Unicycles.JPG" class="unipics">   
+            </div>
+            
+            <div class="col-4"> </div>
         </div>
     </div>
 
