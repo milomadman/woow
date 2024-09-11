@@ -14,9 +14,11 @@ body {
   /*border: 1px solid red;*/
 }
 
+.col-05 {width: 4.166%}
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
+.col-35 {width: 29.166%}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
 .col-6 {width: 50%;}
@@ -209,8 +211,8 @@ input, textarea {
   margin-bottom: 10%;
 }
 
-.Inhalt a {
-  background-color: red;
+.Inhalt li{
+  margin-top: 10px;
 }
 
 /*  
