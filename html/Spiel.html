@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../memory-game.css" type="text/css" />
+    <script src="../js/functions.js"></script>
+    <link rel="icon" href="../Logos/Uni.svg">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="../index.html" class="logo" id="logo">
+            <div id="logo-container"></div>
+        </a>
+        <a href="../index.html">Training</a>
+        <a href="Verein.html">Verein</a>
+        <a href="Einrad.html">Einradsport</a>
+        <a href="Wir.html">Über uns</a>
+        <a href="Kontakt.html">Kontakt</a>
+        <a class="active "href="Spiel.html">Spiel</a>
+    </div>
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10" id="Memory">
+            <h1 id="GameTitle">Memory Spiel</h1>
+            <div class="memory-game" id="memoryGame">
+                <div class="memory-board"></div>
+
+                <div class="modal modal-fadeIn" id="modal-match">
+                    <header class="modal-header"> 
+                        <span onclick="document.getElementById('pic').innerHTML=''; 
+                                        document.getElementById('modal-match').style.display='none'"
+                            class="modal-close-button display-topright">&times;</span>
+                        <h2 id="modalhead">This is:</h2>
+                    </header>
+                    <div class="modal-body">
+                        <h2 id="uniname"></h2>
+                        <div id="pic"></div>
+                        <table>
+                            <tr>
+                                <th style="width:200px">Einradgrösse:</th>
+                                <td id="unisize">></td>
+                            </tr>
+                            <tr>
+                                <th>Ort: </th>
+                                <td id="uniort">></td>
+                            </tr>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="memory-ui">
+                    <span class="memory-moves">Moves: <span id="memoryMoves">0</span></span>
+                    <button class="playBtn">Start Over</button>
+                    <span class="memory-matches">Matches: <span id="memoryMatches">0</span> <span class="memory-matches-cards" id="memoryMatchesCards"></span></span>
+                </div>  
+            </div>
+
+            <script src="../js/memory-game.js"></script>
+            <script type="module">
+                import MemoryCards from '../js/memory-cards.js';
+                let memoryGame = new MemoryGame({
+                    selector: document.getElementById('memoryGame'),
+                    cards: MemoryCards.getCards()
+                });
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>
