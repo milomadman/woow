@@ -107,7 +107,7 @@ p {
 
 .ourPics {
   width: 90%;
-  padding-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .oneofus {
@@ -136,8 +136,13 @@ ul.uni-bullet {
 #arrow {
   position: relative;
   overflow: visible;
-  height:"700";
-  width:"750";
+}
+
+#arrowpath {
+  clip-rule:evenodd;
+  fill-rule:evenodd;
+  stroke-width:0.866823;
+  fill-opacity: 0.5;
 }
 
 label {
@@ -202,9 +207,10 @@ input, textarea {
 }
 
 .univideo {
-  width: 80%;
   margin-left: 10%;
-  margin-top: 5%;
+  margin-top: 3.16em;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 #Weiteres {

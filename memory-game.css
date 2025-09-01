@@ -1,0 +1,374 @@
+#GameTitle {
+    text-align: center;
+}
+
+.memory-game {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+    overflow: hidden;
+    position: relative;
+    /* background-color: #f0f0f0; */
+}
+.memory-board {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10.5%, 1fr));
+    grid-gap: 4% 2%;
+}
+
+.memory-card-item {
+    width: 100%;
+    height: 100%;
+    /* border: 3px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    background-color: transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+.memory-card-item.visible .memory-card-item-inner {
+    transform: rotateY(180deg);
+}
+.memory-card-item.no-match:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 50, 50, 0.5);
+}
+.memory-card-item.solved {
+    opacity: 0.0;
+}
+.memory-card-item.solved .memory-card-item-inner {
+    transform: rotateY(180deg);
+}
+
+.memory-card-item:nth-child(n+1) {
+    transform: rotate(1.2deg);
+}
+.memory-card-item:nth-child(2n+1) {
+    transform: rotate(-1.8deg);
+}
+.memory-card-item:nth-child(3n+1) {
+    transform: rotate(1.4deg);
+}
+.memory-card-item:nth-child(4n+1) {
+    transform: rotate(-1.4deg);
+}
+.memory-card-item:nth-child(5n+1) {
+    transform: rotate(1.8deg);
+}
+.memory-card-item:nth-child(6n+1) {
+    transform: rotate(0.8deg);
+}
+.memory-card-item:nth-child(7n+1) {
+    transform: rotate(-1.2deg);
+}
+
+.memory-card-item-inner {
+    width: 100%;
+    padding-top: 100%;
+    display: block;
+    text-align: center;
+    position: relative;
+    transition: transform 0.25s;
+    transform-style: preserve-3d;
+}
+
+.memory-card-item-front,
+.memory-card-item-back {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.memory-card-item-front {
+    padding: 20px;
+    color: black;
+    cursor: pointer;
+    box-shadow: inset 0 0 8px rgba(0,0,0, 0.25);
+    transition: all 150ms ease-in-out;
+    background: repeating-linear-gradient(
+        -45deg,
+        #222,
+        #222 10px,
+        #333 10px,
+        #333 20px
+    );
+
+}
+
+.memory-card-item:hover .memory-card-item-front {
+    background: repeating-linear-gradient(
+            -45deg,
+            #333,
+            #333 10px,
+            #444 10px,
+            #444 20px
+    );
+}
+.memory-card-item-back {
+    color: white;
+    transform: rotateY(180deg);
+}
+.memory-card-item img {
+    height: 100%;
+}
+
+
+#memory-ui {
+    height: 50px;
+    margin: 1em 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+.memory-ui .memory-moves {
+    display: flex;
+}
+.memory-ui .memory-matches {
+    display: flex;
+    align-items: center;
+}
+#memoryMoves,
+#memoryMatches {
+    margin: 0 5px;
+    font-weight: 500;
+}
+
+.memory-matches-cards {
+    margin: 0 20px;
+}
+.memory-matches-cards,
+.memory-matches-cards:before {
+    width: 64px;
+    height: 64px;
+    display: block;
+    transform: rotate(-16deg);
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #666;
+    background: repeating-linear-gradient(
+        -45deg,
+        #222,
+        #222 5px,
+        #333 5px,
+        #333 10px
+    );
+}
+
+.memory-matches-cards:before {
+    content: '';
+    transform: rotate(18deg);
+}
+
+.move-item {
+    width: 64px;
+    height: 64px;
+    display: block;
+    position: fixed;
+    transition: all 350ms ease-out;
+}
+.move-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.playBtn {
+    width: auto;
+    min-width: 240px;
+    margin: 10px auto;
+    padding: 12px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+    background-color: #333;
+    transition: all 80ms ease-in-out;
+}
+.playBtn:hover {
+    background-color: #5D5C5A;
+    text-decoration: none;
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    position: fixed;
+    opacity: 0;
+    background: rgba(0,0,0,0.8);
+    transition: all 0.3s;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 640px;
+    max-width: 90%;
+    height: auto;
+    max-height:95%;
+    z-index: 200000;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.modal-stage {
+    margin: 0 auto;
+    color: #4a4a4a;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 2px rgba(0,0,0,0.15);
+}
+
+.modal-body {
+    padding-top: 20px;
+    background-color: #e7e5e5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;    
+}
+
+#uniname {
+    margin-top: 0;
+}
+
+#pic {
+    margin-bottom: 2em;
+}
+
+.modal-header {
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top:2px;               
+    line-height: 10px; 
+    padding-bottom: 2px;
+}
+
+#modalhead {
+    padding-left: 1em;
+}
+
+.modal-close-button {
+    border-radius:5px;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    line-height: 50px;
+    padding-left: 15px;
+    cursor: pointer;
+    z-index: 2;
+    border: 0;
+    background-color: transparent;
+    appearance: none;
+}
+
+.modal-close-button:hover {
+    color: white;
+    background-color: #5D5C5A;
+}
+
+.modal-show {
+    visibility: visible;
+}
+.modal-show ~ .modal-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*
+ * MODAL EFFECTS
+ */
+
+/* fadeIn effect */
+.modal-fadeIn .modal-stage  {
+    opacity: 0.0;
+    transform: scale(0.7);
+    transition: all 300ms;
+}
+.modal-show.modal-fadeIn .modal-stage {
+    transform: scale(1.0);
+    opacity: 1.0;
+}
+
+/* spin effect */
+.modal-spin .modal-stage  {
+    opacity: 0.0;
+    transform: scale(0.2);
+    transition: all 300ms;
+    animation-name: spinOff;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+.modal-show.modal-spin .modal-stage {
+    opacity: 1.0;
+    transform: rotate(0deg);
+    animation-name: spin;
+}
+@keyframes spin {
+    from {
+        opacity: 0.0;
+        transform: rotate(0deg) scale(0.2);
+    }
+    to {
+        opacity: 1.0;
+        transform: rotate(720deg) scale(1.0);
+    }
+}
+@keyframes spinOff {
+    from {
+        opacity: 1.0;
+        transform: rotate(720deg) scale(1.0);
+
+    }
+    to {
+        opacity: 0.0;
+        transform: rotate(0deg) scale(0.2);
+    }
+}
+
+/* bottomUp effect */
+.modal-bottomUp .modal-stage  {
+    opacity: 0.0;
+    top: 110%;
+    transform: scale(1.0);
+    transition: all 300ms;
+}
+.modal-show.modal-bottomUp .modal-stage {
+    opacity: 1.0;
+    top: 50%;
+}
+
+.display-topright{position:absolute;right:0;top:0}
+
