@@ -114,6 +114,11 @@ p {
   padding-bottom: 20px;
 }
 
+#twoofus {
+  width: 100%;
+  margin-top: 15%;
+}
+
 #Fragen {
   padding-left: 5%;
 }
@@ -188,10 +193,15 @@ input, textarea {
   margin-right: calc(30% - 120px);
 }
 
-#abschicken {
+.abschicken {
   font-size: 20px;
-  background-color: rgb(199, 199, 199);
+  color: #ffffff;
+  opacity: 0.8;
   cursor: pointer;
+}
+
+.abschicken:hover{
+  color: #000;
 }
 
 #Inhaltsverzeichnis {
@@ -300,5 +310,5 @@ td,th {
     margin-bottom: 15%;
     width: 70%;
   }
-}
 
+}
