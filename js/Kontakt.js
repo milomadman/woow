@@ -1,7 +1,15 @@
+document.getElementById("Warte").style.display="none";
 document.getElementById("Danke").style.display="none";
+document.getElementById("reload").style.display="none";
+
+
 document.getElementById('Kontaktformular').addEventListener('submit', function(event) {
+
     event.preventDefault(); // Prevent the form from submitting traditionally
 
+    document.getElementById("Kontaktformular").style.display="none";
+    document.getElementById("Warte").style.display="block";
+    
     // Get form data
     var formData = new FormData(event.target);
     var name = formData.get('Name');
@@ -29,9 +37,10 @@ document.getElementById('Kontaktformular').addEventListener('submit', function(e
         return response.json();
     })
     .then(data => {
-        document.getElementById("Kontaktformular").style.display="none";
+        document.getElementById("Warte").style.display="none";
         document.getElementById("Danke").style.display="block";
-        console.log('Success:', data);
+        document.getElementById("reload").style.display="block";
+
     })
     .catch(error => {
         console.error('Error:', error);
