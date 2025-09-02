@@ -11,8 +11,8 @@
         <a href="../index.html" class="logo" id="logo">
             <div id="logo-container"></div>
         </a>
-        <a href="../index.html">Training</a>
-        <a href="Verein.html">Verein</a>
+        <a href="../index.html">Verein</a>
+        <a href="Training.html">Training</a>
         <!--<a href="html/Einrad.html">Einradsport</a>-->
         <a href="Wir.html">Über uns</a>
         <a class="active" href="Kontakt.html">Kontakt</a>
@@ -54,11 +54,13 @@
                         <textarea type="text" id="Mitteilung" name="Mitteilung"s></textarea>
                     </div>
                     <div id="AbschickKnopf">
-                        <button id="abschicken" type="submit">Abschicken</button>
+                        <button class="abschicken" type="submit">Abschicken</button>
                     </div>
                 </form>
 
+                <h2 id="Warte">Warte kurz...</h2>
                 <h2 id="Danke">Vielen Dank für deine Mitteilung, wir werden uns in Kürze melden!</h2>
+                <button id="reload" class="abschicken" onClick="window.location.reload()"> Neue Nachricht</button>
                 
                 <script src="../js/Kontakt.js"></script>
             </div>
