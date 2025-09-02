@@ -11,21 +11,15 @@ document.getElementById('Kontaktformular').addEventListener('submit', function(e
 
     // Construct the JSON object to be sent to Airtable
     var requestBody = JSON.stringify({
-        "fields": {
-            "Name": name,
-            "Email": email,
-            "Mitteilung": message,
-
-        }
+        Name: name,
+        Email: email,
+        Mitteilung: message
     });
 
-    // Send data to Airtable using fetch API
-    fetch('https://api.airtable.com/v0/appX7zVHQpDRRHllk/Mitteilungen', {
-        method: 'POST',
-        headers: {
-            'Authorization': 'Bearer patLHfZCfikvZOji7.8a8b9e3c9637eb60f0344f1d9688ccba343635c7f4c318455f705b9b1e88ab38',
-            'Content-Type': 'application/json'
-        },
+
+    fetch("https://woow-thun.netlify.app/.netlify/functions/airtable", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: requestBody
     })
     .then(response => {
@@ -41,6 +35,6 @@ document.getElementById('Kontaktformular').addEventListener('submit', function(e
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Sorry, there was a problem with your submission. Please try again.');
+        alert('Es gab ein Problem. Bitte schick eine Email an info@woow-thun.ch');
     });
 });
