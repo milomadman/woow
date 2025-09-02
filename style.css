@@ -191,6 +191,7 @@ input, textarea {
 #abschicken {
   font-size: 20px;
   background-color: rgb(199, 199, 199);
+  cursor: pointer;
 }
 
 #Inhaltsverzeichnis {
@@ -300,3 +301,4 @@ td,th {
     width: 70%;
   }
 }
+
