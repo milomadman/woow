@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     x = Math.floor(Math.random()*colors.length);
     mycolor = colors[x]
 
-
     document.getElementsByClassName("active")[0].style.backgroundColor=mycolor;
 
     if (window.location.pathname == "/html/Kontakt.html"){
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (window.location.pathname == "/html/Spiel.html"){
         document.getElementById("memory-ui").style.background = mycolor+"80";
         document.getElementsByClassName("modal-header")[0].style.background = mycolor;
-    } else if (["/index.html","/html/Verein.html"].includes(window.location.pathname)){
+    } else if (["/index.html","/html/Verein.html","/"].includes(window.location.pathname)){
         for (var i = 0; i< document.getElementsByClassName("colorletter").length ; i++){
             document.getElementsByClassName("colorletter")[i].style.color = mycolor;
         }
