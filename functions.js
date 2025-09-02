@@ -25,9 +25,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (window.location.pathname == "/html/Kontakt.html"){
         document.getElementById("arrowpath").style.fill = mycolor;
-        console.log("hello");
+    } else if (window.location.pathname == "/html/Spiel.html"){
+        document.getElementById("memory-ui").style.background = mycolor+"80";
+        document.getElementsByClassName("modal-header")[0].style.background = mycolor;
+    } else if (["/index.html","/html/Verein.html"].includes(window.location.pathname)){
+        for (var i = 0; i< document.getElementsByClassName("colorletter").length ; i++){
+            document.getElementsByClassName("colorletter")[i].style.color = mycolor;
+        }
+    } else if (window.location.pathname == "/html/Wir.html"){
+        for (var i = 0; i< document.getElementsByClassName("ourPics").length ; i++){
+            document.getElementsByClassName("ourPics")[i].style.border = "5px ridge " + mycolor;
+        }
     }
-    console.log(window.location);
 
     var src;
     if (window.location.pathname == "/index.html" ){
