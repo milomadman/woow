@@ -81,9 +81,6 @@ p {
   text-justify: inter-word;
 }
 
-#Kontakt {
-  margin-top: 1%;
-}
 
 #aboutus {
   margin-left:0;
@@ -98,17 +95,70 @@ p {
   padding: 0;
 }
 
-#logo-container {
-  height:100%;
-  max-height: 100%;
-  width: auto;
+#newlogo{
+  display: inline-block;
 }
 
+#newlogo-container{
+  width: 100%;
+  height: 100%;
+}
 
 .ourPics {
   width: 90%;
   margin-bottom: 5%;
 }
+
+.TrainingPics {
+  width: 80%;
+  padding: 0;
+}
+
+.training {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.left {
+  margin-left: 15%;
+}
+
+.training:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.trainingInfo {
+  width: 90%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.icons {
+  display: inline-block;
+  width: 27px;
+  height: 2em;
+  padding-right: 5px;
+}
+
+.description {
+  width: 100%;
+  vertical-align: top;
+  padding-top: 7px;
+}
+
+th {
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 18px;
+}
+
+.frontPics {
+  width: 90%;
+  margin-top: 3%;
+}
+
 
 .oneofus {
   padding-bottom: 20px;
@@ -123,13 +173,17 @@ p {
   padding-left: 5%;
 }
 
+.Ziele {
+  margin-top: 5px;
+}
+
 ul.uni-bullet {
   list-style-image: url('./Logos/mini-uni.svg');
-  overflow: visible;
 }
 
 .questions li {
   font-size: 20px;
+  padding-top: 1em;
 }
 
 #do-it{
@@ -204,12 +258,33 @@ input, textarea {
   color: #000;
 }
 
-#Inhaltsverzeichnis {
-  margin-bottom: 0;
+.UniList {
+  margin-bottom: 3em;
 }
 
-.Einräder {
-  margin-top: 0;
+.UniList ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.UniList ul li {
+  display: flex;
+  align-items: center;
+  line-height: 1.9em;
+  gap: 8px;
+}
+
+.disciplines {
+  margin-left: 30px;
+}
+
+
+.UniList li::before{
+  content: url('./Logos/mini-uni.svg');
+}
+
+.UniList li a{
+  display: block;
 }
 
 .unipics {
@@ -217,10 +292,14 @@ input, textarea {
   margin-bottom: 8%;
 }
 
+.noshow {
+  display: none;
+}
+
 .univideo {
-  margin-left: 10%;
   margin-top: 3.16em;
-  width: 100%;
+  margin-left: 5%;
+  width: 90%;
   aspect-ratio: 16 / 9;
 }
 
@@ -228,12 +307,67 @@ input, textarea {
   margin-bottom: 10%;
 }
 
-.Inhalt li{
-  margin-top: 10px;
+.unicycles {
+  margin-left: 8em;
 }
 
-/*  
+.unicycles dd {
+  margin-bottom: 2em;
+  margin-left: 0;
+  margin-top: 0.25em;
+}
 
+.uni-shop{
+  margin-left: 1em;
+  color: black;
+}
+
+.uni-shops{
+  margin-left: 8em;
+}
+
+.uni-shops td {
+  min-width: 155px;
+}
+
+.spacer td {
+  height: 1em;
+  padding: 0;
+  border: none;
+}
+
+
+
+#javier-container {
+  width: 90%;
+}
+
+.arrow-right {
+  display:inline-block;
+}
+
+td.icons {
+    display: flex;
+    align-items: center; /* vertical alignment */
+    gap: 10px;           /* space between icon and text */
+}
+
+
+
+/*  
+table, th, td {
+  outline: 1px solid black;
+}
+
+
+.newTraining {
+  margin-top: 10px;
+} 
+
+#training {
+  margin-top: 25px;
+}
+  
 table, th, td {
   border: 1px solid black;
 }
@@ -248,23 +382,25 @@ table {
   width: 80%;
 }
 
-th {
-  text-align: left;
-}
+
 
 td,th {
   width:30%;
   padding-left:7%;
 }*/
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
   .logo {
     margin-right: auto;
+  }
+
+  #message {
+    margin-right: 5%;
   }
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 
 
   /* For mobile phones: */
@@ -306,8 +442,26 @@ td,th {
   }
 
   .univideo {
-    margin-left: 0;
+    margin-left: 15%;
     margin-bottom: 15%;
+    width: 70%;
+  }
+
+  .training {
+        flex-direction: column !important;
+        text-align: left;
+  }
+
+  .trainingInfo {
+    width: 100%;
+  }
+
+  .left {
+    margin-left: 0;
+  }
+  
+  .trainingPics {
+    margin-left: 15%;
     width: 70%;
   }
 
